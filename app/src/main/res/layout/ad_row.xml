@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ad_row_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Pavadinimas"
+        android:textColor="@color/smokey_black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ad_row_valid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="Data"
+        android:textColor="@color/mango_tango"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ad_row_name"
+        app:layout_constraintTop_toBottomOf="@+id/ad_row_name"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/ad_row_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="status"
+        android:textColor="@color/flame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ad_row_name" />
+
+    <TextView
+        android:id="@+id/ad_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ad_timer"
+        android:textColor="@color/kobe_brown"
+        app:layout_constraintEnd_toEndOf="@+id/ad_row_status"
+        app:layout_constraintTop_toTopOf="@+id/ad_row_valid" />
+</androidx.constraintlayout.widget.ConstraintLayout>

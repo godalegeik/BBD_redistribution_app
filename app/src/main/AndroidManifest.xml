@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.redistribution_app">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Redistribution_app.NoActionBar">
+<!--        <uses-library-->
+<!--            android:name="com.google.android.wearable"-->
+<!--            android:required="true" />-->
+
+<!--        &lt;!&ndash;-->
+<!--               Set to true if your app is Standalone, that is, it does not require the handheld-->
+<!--               app to run.-->
+<!--        &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="com.google.android.wearable.standalone"-->
+<!--            android:value="true" />-->
+
+<!--        <activity-->
+<!--            android:name=".ui.Ads.NotificationActivity"-->
+<!--            android:label="@string/title_activity_notification">-->
+<!--        </activity>-->
+        <activity android:name=".ui.Orgs.Change_Pass_Activity"
+            android:label="Slaptažodžio keitimas"/>
+        <activity android:name=".ui.Ads.Notifications" />
+        <activity android:name=".ui.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.Ads.CreateAdActivity"
+            android:label="Naujas skelbimas" />
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.Orgs.OrgInfoActivity"
+            android:label="Organizacijos informacija"/>
+        <activity
+            android:name=".ui.Orgs.OrgsActivity"
+            android:label="Organizacijos" />
+        <activity android:name=".ui.Ads.AdInfoActivity"
+            android:label="Skelbimo informacija"/>
+        <activity
+            android:name=".ui.Ads.AdsActivity"
+            android:label="Skelbimai" />
+<!--        <activity android:name=".ui.BaseActivity" >-->
+
+<!--        </activity>-->
+        <service android:name=".utils.NewAdJob"
+            android:label="Test"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+    </application>
+
+</manifest>

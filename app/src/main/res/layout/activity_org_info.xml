@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/pale_background"
+    tools:context=".ui.Orgs.OrgInfoActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Redistribution_app.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Redistribution_app.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/org_info_layout"
+        android:layout_width="403dp"
+        android:layout_height="667dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:id="@+id/org_info_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="org_info_code"
+            android:textColor="@color/smokey_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_adress6"
+            app:layout_constraintStart_toStartOf="@+id/org_info_adress6"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_code3" />
+
+        <TextView
+            android:id="@+id/org_info_code3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_code"
+            android:textColor="@color/mango_tango"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_code"
+            app:layout_constraintStart_toStartOf="@+id/org_info_code"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_name" />
+
+        <Button
+            android:id="@+id/org_info_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/edit"
+            android:textColor="@color/pale_background"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_password_change"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/org_info_password_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Keisti Slaptazodi"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_listView"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/org_info_email6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_email"
+            android:textColor="@color/mango_tango"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_email"
+            app:layout_constraintStart_toStartOf="@+id/org_info_email"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_phone" />
+
+        <TextView
+            android:id="@+id/org_info_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="org_info_phone"
+            android:textColor="@color/smokey_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_email6"
+            app:layout_constraintStart_toStartOf="@+id/org_info_email6"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_phone6" />
+
+        <ListView
+            android:id="@+id/org_info_listView"
+            android:layout_width="407dp"
+            android:layout_height="239dp"
+
+
+            android:background="#7AFFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_type">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/org_info_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="org_info_person"
+            android:textColor="@color/smokey_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_phone6"
+            app:layout_constraintStart_toStartOf="@+id/org_info_phone6"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_person6" />
+
+        <TextView
+            android:id="@+id/org_info_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="org_info_email"
+            android:textColor="@color/smokey_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_type6"
+            app:layout_constraintStart_toStartOf="@+id/org_info_type6"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_email6" />
+
+        <TextView
+            android:id="@+id/org_info_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="org_info_city"
+            android:textColor="@color/smokey_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_person6"
+            app:layout_constraintStart_toStartOf="@+id/org_info_person6"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_city6" />
+
+        <TextView
+            android:id="@+id/org_info_type6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_type"
+            android:textColor="@color/mango_tango"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_type"
+            app:layout_constraintStart_toStartOf="@+id/org_info_type"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_email" />
+
+        <TextView
+            android:id="@+id/org_info_name6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/org_name"
+            android:textColor="@color/mango_tango"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_name"
+            app:layout_constraintStart_toStartOf="@+id/org_info_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/org_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="org_info_name"
+            android:textColor="@color/smokey_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_code3"
+            app:layout_constraintStart_toStartOf="@+id/org_info_code3"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_name6" />
+
+        <TextView
+            android:id="@+id/org_info_city6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_city"
+            android:textColor="@color/mango_tango"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_city"
+            app:layout_constraintStart_toStartOf="@+id/org_info_city"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_adress" />
+
+        <TextView
+            android:id="@+id/org_info_phone6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_phone"
+            android:textColor="@color/mango_tango"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_phone"
+            app:layout_constraintStart_toStartOf="@+id/org_info_phone"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_person" />
+
+        <TextView
+            android:id="@+id/org_info_adress6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_adress"
+            android:textColor="@color/mango_tango"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_adress"
+            app:layout_constraintStart_toStartOf="@+id/org_info_adress"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_code" />
+
+        <TextView
+            android:id="@+id/org_info_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="org_info_adress"
+            android:textColor="@color/smokey_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_city6"
+            app:layout_constraintStart_toStartOf="@+id/org_info_city6"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_adress6" />
+
+        <TextView
+            android:id="@+id/org_info_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="org_info_type"
+            android:textColor="@color/smokey_black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_listView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_type6" />
+
+        <TextView
+            android:id="@+id/org_info_person6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_person"
+            android:textColor="@color/mango_tango"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_person"
+            app:layout_constraintStart_toStartOf="@+id/org_info_person"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_city" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/org_edit_layout"
+        android:layout_width="398dp"
+        android:layout_height="656dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <EditText
+            android:id="@+id/reg_org_code2"
+            android:layout_width="293dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:hint="@string/org_code"
+            android:inputType="number"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_person3"
+            app:layout_constraintStart_toStartOf="@+id/org_info_person3"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_code2" />
+
+        <EditText
+            android:id="@+id/reg_org_name2"
+            android:layout_width="236dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:hint="@string/org_name"
+            android:inputType="textPersonName"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_code2"
+            app:layout_constraintStart_toStartOf="@+id/org_info_code2"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_name3" />
+
+        <EditText
+            android:id="@+id/reg_org_phone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/org_phone"
+            android:inputType="phone"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            app:layout_constraintBottom_toTopOf="@+id/reg_org_cancel2"
+            app:layout_constraintStart_toStartOf="@+id/reg_org_cancel2"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_phone3" />
+
+        <EditText
+            android:id="@+id/reg_org_email2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/org_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_phone3"
+            app:layout_constraintStart_toStartOf="@+id/org_info_phone3"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_email3" />
+
+        <EditText
+            android:id="@+id/reg_org_adress2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/org_adress"
+            android:inputType="textPostalAddress"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_email3"
+            app:layout_constraintStart_toStartOf="@+id/org_info_email3"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_adress3" />
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/miestas_spinner2"
+            android:layout_width="212dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_adress3"
+            app:layout_constraintStart_toStartOf="@+id/org_info_adress3"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_city3" />
+
+        <Button
+            android:id="@+id/reg_org_cancel2"
+            android:layout_width="123dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="40dp"
+            android:text="Atšaukti"
+            app:backgroundTint="@color/mango_tango"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_org_phone2" />
+
+        <EditText
+            android:id="@+id/reg_org_person2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/org_person"
+            android:inputType="textPersonName"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            app:layout_constraintBottom_toTopOf="@+id/org_info_city3"
+            app:layout_constraintStart_toStartOf="@+id/org_info_city3"
+            app:layout_constraintTop_toBottomOf="@+id/org_info_person3" />
+
+        <Button
+            android:id="@+id/reg_org_accept2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="88dp"
+            android:text="Patvirtinti"
+            app:layout_constraintStart_toEndOf="@+id/reg_org_cancel2"
+            app:layout_constraintTop_toTopOf="@+id/reg_org_cancel2" />
+
+        <TextView
+            android:id="@+id/org_info_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/org_name"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/reg_org_name2"
+            app:layout_constraintStart_toStartOf="@+id/reg_org_name2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/org_info_person3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_person"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/reg_org_person2"
+            app:layout_constraintStart_toStartOf="@+id/reg_org_person2"
+            app:layout_constraintTop_toBottomOf="@+id/reg_org_code2" />
+
+        <TextView
+            android:id="@+id/org_info_city3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_city"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/miestas_spinner2"
+            app:layout_constraintStart_toStartOf="@+id/miestas_spinner2"
+            app:layout_constraintTop_toBottomOf="@+id/reg_org_person2" />
+
+        <TextView
+            android:id="@+id/org_info_adress3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_adress"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/reg_org_adress2"
+            app:layout_constraintStart_toStartOf="@+id/reg_org_adress2"
+            app:layout_constraintTop_toBottomOf="@+id/miestas_spinner2" />
+
+        <TextView
+            android:id="@+id/org_info_email3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_email"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/reg_org_email2"
+            app:layout_constraintStart_toStartOf="@+id/reg_org_email2"
+            app:layout_constraintTop_toBottomOf="@+id/reg_org_adress2" />
+
+        <TextView
+            android:id="@+id/org_info_phone3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_phone"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/reg_org_phone2"
+            app:layout_constraintStart_toStartOf="@+id/reg_org_phone2"
+            app:layout_constraintTop_toBottomOf="@+id/reg_org_email2" />
+
+        <TextView
+            android:id="@+id/org_info_code2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/org_code"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/reg_org_code2"
+            app:layout_constraintStart_toStartOf="@+id/reg_org_code2"
+            app:layout_constraintTop_toBottomOf="@+id/reg_org_name2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/pale_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <Button
+            android:id="@+id/cancel_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="cancel"
+            app:backgroundTint="@color/mango_tango"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/apply_filter"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/apply_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="Apply"
+            app:layout_constraintBottom_toBottomOf="@+id/cancel_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cancel_filter"
+            app:layout_constraintTop_toTopOf="@+id/cancel_filter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/orgs_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Organizacijos"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/valid_slider" />
+
+        <RadioGroup
+            android:id="@+id/splittable_btn_group"
+            android:layout_width="276dp"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/valid_range_filter"
+            app:layout_constraintStart_toStartOf="@+id/valid_range_filter"
+            app:layout_constraintTop_toBottomOf="@+id/splittable_filter">
+
+            <RadioButton
+                android:id="@+id/splittable_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dalomas"
+                android:textColor="@color/smokey_black" />
+
+            <RadioButton
+                android:id="@+id/splittable_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nedalomas"
+                android:textColor="@color/smokey_black" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/splittable_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dalomas skelbimas"
+            android:textColor="@color/smokey_black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/splittable_btn_group"
+            app:layout_constraintStart_toStartOf="@+id/splittable_btn_group"
+            app:layout_constraintTop_toBottomOf="@+id/food_type_btn_group" />
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/valid_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:stepSize="1.0"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            app:layout_constraintBottom_toTopOf="@+id/ad_key_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ad_key_filter"
+            app:layout_constraintTop_toBottomOf="@+id/valid_range_filter" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Pasirinkite filtrus"
+            android:textColor="@color/flame"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/food_type_filter"
+            app:layout_constraintStart_toStartOf="@+id/food_type_filter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/food_type_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maisto tipas"
+            android:textColor="@color/smokey_black"
+            app:layout_constraintBottom_toTopOf="@+id/food_type_btn_group"
+            app:layout_constraintStart_toStartOf="@+id/food_type_btn_group"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <RadioGroup
+            android:id="@+id/food_type_btn_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/valid_range_filter"
+            app:layout_constraintStart_toStartOf="@+id/valid_range_filter"
+            app:layout_constraintTop_toBottomOf="@+id/food_type_filter">
+
+            <RadioButton
+                android:id="@+id/short_valid_filter"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Paruoštas patiekalas"
+                android:textColor="@color/smokey_black" />
+
+            <RadioButton
+                android:id="@+id/long_valid_filter"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:text="Maisto produktas"
+                android:textColor="@color/smokey_black" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/valid_range_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galiojimo dienų skaičius"
+            android:textColor="@color/smokey_black"
+            app:layout_constraintBottom_toTopOf="@+id/valid_slider"
+            app:layout_constraintStart_toStartOf="@+id/valid_slider"
+            app:layout_constraintTop_toBottomOf="@+id/food_type_btn_group" />
+
+        <CheckBox
+            android:id="@+id/ad_key_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/ad_key"
+            android:textColor="@color/smokey_black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/valid_slider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ads -->
+    <string name="ad_name">Skelbimo pavadinimas</string>
+    <string name="ad_valid_date">Skelbimo galiojimo data</string>
+    <string name="ad_valid_time">Skelbimo galiojimo laikas</string>
+    <string name="ad_created_date">Skelbimo sukūrimo data</string>
+    <string name="ad_status">Skelbimo būsena</string>
+    <string name="ad_splittable">Ar skelbimą galima padalinti</string>
+    <string name="ad_food_type">Maisto tipas</string>
+    <string name="ad_is_dish">Pagamintas patiekalas</string>
+    <string name="ad_key">Maisto skelbimo raktažodžiai</string>
+
+    <!-- orgs -->
+    <string name="org_name">Organizacijos pavadinimas</string>
+    <string name="org_adress">Organizacijos adresas</string>
+    <string name="org_email">Organizacijos atstovo/ės el. paštas</string>
+    <string name="org_code">Organizacijos registracijos numeris</string>
+    <string name="org_city">Miestas</string>
+    <string name="org_person">Organizacijos atstovas/ė</string>
+    <string name="org_phone">Organizacijos atstovo/ės tel. numeris</string>
+    <string name="org_type">Organizacijos tipas</string>
+
+    <!-- buttonsai -->
+    <string name="accept">Patvirtinti</string>
+    <string name="cancel">Atšaukti</string>
+    <string name="commit">Įvykdyti</string>
+    <string name="edit">Redaguoti</string>
+    <string name="reserve">Rezervuoti</string>
+    <string name="unreserve">Atšaukti rez.</string>
+
+
+    <!-- genral -->
+    <string name="comment">Komentaras</string>
+
+</resources>

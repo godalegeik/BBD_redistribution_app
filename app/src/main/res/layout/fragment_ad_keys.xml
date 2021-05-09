@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="373dp"
+        android:layout_height="434dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/pale_background"
+        android:backgroundTint="@color/pale_background"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Pasirinkite maisto tipo raktažodžius"
+            android:textColor="@color/flame"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/keyListScrol"
+            app:layout_constraintStart_toStartOf="@+id/keyListScrol"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/newKeyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            app:layout_constraintBottom_toTopOf="@+id/ad_keys_btns"
+            app:layout_constraintStart_toStartOf="@+id/ad_keys_btns"
+            app:layout_constraintTop_toBottomOf="@+id/keyListScrol">
+
+            <TextView
+                android:id="@+id/textview55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Įveskite naują maisto tipo raktažodį"
+                android:textColor="@color/flame"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/new_ad_key2"
+                app:layout_constraintStart_toStartOf="@+id/new_ad_key"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <AutoCompleteTextView
+                android:id="@+id/new_ad_key"
+                android:layout_width="281dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Skelbimo pavadinimas"
+                android:inputType="textPersonName"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview55" />
+
+            <Button
+                android:id="@+id/new_key_submit"
+                android:layout_width="38dp"
+                android:layout_height="47dp"
+                android:text="+"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/new_ad_key"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ad_keys_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newKeyLayout">
+
+            <Button
+                android:id="@+id/apply_ad_keys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:text="@string/accept"
+                app:layout_constraintBottom_toBottomOf="@+id/cancel_ad_keys"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cancel_ad_keys"
+                app:layout_constraintTop_toTopOf="@+id/cancel_ad_keys"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/cancel_ad_keys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/mango_tango"
+                android:text="@string/cancel"
+                app:layout_constraintEnd_toStartOf="@+id/apply_ad_keys"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/keyListScrol"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:maxHeight="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/newKeyLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/newKeyLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textview">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ad_keys_recView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#7AFFFFFF" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_background"
+    android:backgroundTint="@color/pale_background"
+    tools:context=".ui.RegisterActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Redistribution_app.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:label="Registracija"
+            app:popupTheme="@style/Theme.Redistribution_app.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/org_reg_miestas"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:ems="10"-->
+    <!--        android:inputType="textPersonName"-->
+    <!--        android:text="Miestas"-->
+    <!--        tools:layout_editor_absoluteX="36dp"-->
+    <!--        tools:layout_editor_absoluteY="298dp" />-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttons"
+        android:layout_width="410dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/pale_background"
+        android:backgroundTint="@color/pale_background"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/reg_org_cancel"
+            android:layout_width="123dp"
+            android:layout_height="50dp"
+            android:background="@color/mango_tango"
+            android:backgroundTint="#FFFFFF"
+            android:text="Atšaukti"
+            app:backgroundTint="@color/mango_tango"
+            app:layout_constraintBottom_toBottomOf="@+id/reg_org_accept"
+            app:layout_constraintEnd_toStartOf="@+id/reg_org_accept"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/reg_org_accept" />
+
+        <Button
+            android:id="@+id/reg_org_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patvirtinti"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/reg_org_cancel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="390dp"
+        android:layout_height="626dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/reg_org_accept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2">
+
+        <LinearLayout
+            android:id="@+id/regList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_type"
+                android:textColor="@color/smokey_brown" />
+
+            <RadioGroup
+                android:id="@+id/org_type"
+                android:layout_width="301dp"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/short_valid"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/VI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Verslo įmonė"
+                    android:textColor="@color/smokey_black" />
+
+                <RadioButton
+                    android:id="@+id/LO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Labdaros organizacija"
+                    android:textColor="@color/smokey_black" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_name"
+                android:textColor="@color/smokey_brown" />
+
+            <EditText
+                android:id="@+id/reg_org_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="pvz.: Verslas UAB"
+                android:inputType="textPersonName"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_code"
+                android:textColor="@color/smokey_brown" />
+
+            <EditText
+                android:id="@+id/reg_org_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/org_code"
+                android:inputType="number"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_person"
+                android:textColor="@color/smokey_brown" />
+
+            <EditText
+                android:id="@+id/reg_org_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="pvz.: Vardutė Pavardutė"
+                android:inputType="textPersonName"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_adress"
+                android:textColor="@color/smokey_brown" />
+
+            <EditText
+                android:id="@+id/reg_org_adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="pvz.: Pirmoji gatve 1 -11"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_city"
+                android:textColor="@color/smokey_brown" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/miestas_spinner"
+                android:layout_width="212dp"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_email"
+                android:textColor="@color/smokey_brown" />
+
+            <EditText
+                android:id="@+id/reg_org_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="pvz.: vardas@email.lt"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_phone"
+                android:textColor="@color/smokey_brown" />
+
+            <EditText
+                android:id="@+id/reg_org_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="pvz.: 86000000"
+                android:inputType="phone"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Slaptažodis"
+                android:textColor="@color/smokey_brown" />
+
+            <EditText
+                android:id="@+id/reg_org_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="**********"
+                android:inputType="textPassword"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pakartokite slaptažodį"
+                android:textColor="@color/smokey_brown" />
+
+            <EditText
+                android:id="@+id/reg_org_password2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="**********"
+                android:inputType="textPassword"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

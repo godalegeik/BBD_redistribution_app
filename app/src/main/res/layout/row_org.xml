@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/org_row_name"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/org_name"
+        android:textColor="@color/kobe_brown"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/org_row_adress"
+        app:layout_constraintEnd_toStartOf="@+id/org_row_type"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/org_row_adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/org_adress"
+        android:textColor="@color/mango_tango"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/org_row_name"
+        app:layout_constraintTop_toBottomOf="@+id/org_row_name" />
+
+    <TextView
+        android:id="@+id/org_row_type"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:text="@string/org_type"
+        android:textColor="@color/flame"
+        app:layout_constraintBottom_toBottomOf="@+id/org_row_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/org_row_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

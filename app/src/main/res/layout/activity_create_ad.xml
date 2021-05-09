@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/pale_background"
+    tools:context=".ui.Ads.CreateAdActivity">
+
+    <Button
+        android:id="@+id/new_ad_cancel"
+        android:layout_width="123dp"
+        android:layout_height="50dp"
+        android:text="Atšaukti"
+        app:backgroundTint="@color/mango_tango"
+        app:layout_constraintBottom_toBottomOf="@+id/new_ad_accept"
+        app:layout_constraintEnd_toStartOf="@+id/new_ad_accept"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/new_ad_accept" />
+
+    <Button
+        android:id="@+id/new_ad_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Patvirtinti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/new_ad_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Redistribution_app.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Redistribution_app.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="407dp"
+        android:layout_height="508dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:id="@+id/new_ad_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_key"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_keys"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_keys"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_name" />
+
+        <TextView
+            android:id="@+id/new_ad_text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/ad_name"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_name"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/new_ad_text9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Raktažodžiai"
+            android:textColor="@color/mellow_orange"
+            app:layout_constraintBottom_toBottomOf="@+id/new_ad_new_key"
+            app:layout_constraintStart_toEndOf="@+id/new_ad_new_key"
+            app:layout_constraintTop_toTopOf="@+id/new_ad_new_key" />
+
+        <TextView
+            android:id="@+id/new_ad_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_splittable"
+            android:textColor="@color/smokey_brown"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/is_splittable"
+            app:layout_constraintStart_toStartOf="@+id/is_splittable"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_keys" />
+
+        <TextView
+            android:id="@+id/new_ad_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_food_type"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/food_type"
+            app:layout_constraintStart_toStartOf="@+id/food_type"
+            app:layout_constraintTop_toBottomOf="@+id/is_splittable" />
+
+        <TextView
+            android:id="@+id/new_ad_text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comment"
+            android:textColor="@color/smokey_brown"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_comment"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_comment"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_valid_time_layout" />
+
+        <CheckBox
+            android:id="@+id/is_splittable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dalomas"
+            android:textColor="@color/smokey_black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_text3"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_text3"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_text2" />
+
+        <EditText
+            android:id="@+id/new_ad_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Skelbimo pavadinimas"
+            android:inputType="textPersonName"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_text"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_text"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_text7" />
+
+        <ExpandableListView
+            android:id="@+id/new_ad_keys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="pvz.: bananai"
+            android:inputType="textPersonName"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_text2"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_text2"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_text" />
+
+        <!--        <ListView-->
+        <!--            android:id="@+id/new_ad_keys2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content" />-->
+
+
+        <RadioGroup
+            android:id="@+id/food_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_valid_date_layout"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_valid_date_layout"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_text3">
+
+            <RadioButton
+                android:id="@+id/long_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:focusedByDefault="false"
+                android:selectAllOnFocus="false"
+                android:text="Maisto produktas"
+                android:textColor="@color/smokey_black" />
+
+            <RadioButton
+                android:id="@+id/short_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paruoštas patiekalas"
+                android:textColor="@color/smokey_black" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/new_ad_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="40dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="komentaras"
+            android:inputType="textMultiLine"
+            android:textColor="@color/smokey_black"
+            android:textColorHint="@color/mellow_orange"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_text6" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_ad_valid_date_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_valid_time_layout"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_valid_time_layout"
+            app:layout_constraintTop_toBottomOf="@+id/food_type">
+
+            <Button
+                android:id="@+id/choose_ad_valid"
+                android:layout_width="169dp"
+                android:layout_height="36dp"
+                android:text="Rinktis datą"
+                app:layout_constraintBottom_toBottomOf="@+id/new_ad_valid"
+                app:layout_constraintStart_toEndOf="@+id/new_ad_valid"
+                app:layout_constraintTop_toTopOf="@+id/new_ad_valid" />
+
+            <TextView
+                android:id="@+id/new_ad_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ad_valid_date"
+                android:textColor="@color/smokey_brown"
+                app:layout_constraintStart_toStartOf="@+id/new_ad_valid"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/new_ad_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="@string/ad_valid_date"
+                android:inputType="date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_ad_text4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_ad_valid_time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/new_ad_text6"
+            app:layout_constraintStart_toStartOf="@+id/new_ad_text6"
+            app:layout_constraintTop_toBottomOf="@+id/new_ad_valid_date_layout">
+
+            <TextView
+                android:id="@+id/new_ad_valid2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="@string/ad_valid_time"
+                android:inputType="date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/smokey_black"
+                android:textColorHint="@color/mellow_orange"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_ad_text5" />
+
+            <TextView
+                android:id="@+id/new_ad_text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ad_valid_time"
+                android:textColor="@color/smokey_brown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/new_ad_new_key"
+            android:layout_width="45dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="10dp"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/new_ad_text"
+            app:layout_constraintStart_toEndOf="@+id/new_ad_text"
+            app:layout_constraintTop_toTopOf="@+id/new_ad_text"
+            app:layout_constraintVertical_bias="0.4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
